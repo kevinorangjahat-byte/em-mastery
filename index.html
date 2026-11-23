@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>EM Mastery – ATLS & ACLS</title>
+  <meta name="description" content="Emergency Medicine Mastery – sistem belajar ATLS & ACLS untuk dokter." />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="EM Mastery" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="css/app.css" />
+  <script>
+    // Terapkan tema sebelum render agar tidak berkedip
+    try {
+      const t = localStorage.getItem('em-theme') || 'system';
+      if (t !== 'system') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar" class="sidebar" aria-label="Navigasi utama"></aside>
+    <div class="scrim" id="scrim"></div>
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="icon-btn only-mobile" id="menuBtn" aria-label="Buka menu">☰</button>
+        <form class="search-box" id="globalSearch" role="search">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="globalSearchInput" placeholder="Cari topik, obat, ECG, algoritma…  ( / )" autocomplete="off" />
+        </form>
+        <div class="topbar-actions">
+          <button class="chip-btn" id="pocketBtn" title="Emergency Pocket Reference (P)">⚡ Pocket</button>
+          <span class="streak-pill" id="streakPill" title="Study streak">🔥 0</span>
+          <button class="icon-btn" id="themeBtn" aria-label="Ganti tema">◐</button>
+        </div>
+      </header>
+      <main id="view" tabindex="-1"></main>
+    </div>
+  </div>
+  <nav class="bottom-nav" id="bottomNav" aria-label="Navigasi cepat">
+    <a href="#/" data-nav="#/"><span>◎</span>Beranda</a>
+    <a href="#/path" data-nav="#/path|#/modules|#/topic"><span>📘</span>Belajar</a>
+    <a href="#/quiz" data-nav="#/quiz|#/cases|#/algorithms"><span>✅</span>Latihan</a>
+    <a href="#/flashcards" data-nav="#/flashcards"><span>🗂️</span>Kartu</a>
+    <button type="button" id="moreBtn"><span>☰</span>Menu</button>
+  </nav>
+  <div id="pocketDrawer" class="drawer" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

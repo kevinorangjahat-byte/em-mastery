@@ -1,0 +1,24 @@
+{
+  "name": "EM Mastery – ATLS & ACLS",
+  "short_name": "EM Mastery",
+  "description": "Sistem belajar ATLS & ACLS untuk dokter — bisa dipakai offline.",
+  "lang": "id",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f766e",
+  "theme_color": "#0f766e",
+  "categories": ["education", "medical"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Pocket Reference", "url": "./#/pocket", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Quiz harian", "url": "./#/quiz?mode=daily", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Kalkulator", "url": "./#/calculators", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
