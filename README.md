@@ -56,6 +56,8 @@ Aplikasi ini adalah alat bantu belajar, **bukan** pengganti guideline resmi, kur
 
 ## Dipakai di HP & offline (PWA)
 
+**Versi online:** https://kevinorangjahat-byte.github.io/em-mastery/ (GitHub Pages dari branch `main`; setiap `git push` otomatis memperbarui situs).
+
 Aplikasi ini adalah Progressive Web App: `manifest.webmanifest` (nama, logo, layar penuh) dan `sw.js` (cache semua file untuk offline).
 
 1. **Hosting HTTPS** (wajib — service worker tidak jalan lewat `http://` IP lokal). Pilihan gratis: Netlify Drop (seret folder `emergency-mastery` ke https://app.netlify.com/drop), GitHub Pages, atau Cloudflare Pages.
